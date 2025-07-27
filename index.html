@@ -1,130 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anthony Nguyen | Portfolio</title>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+          crossorigin="anonymous">
 </head>
-<!--======================= Navagation Bar ===================================-->
-
 <body>
-    <div id="header">
-        <div class="container">
-            <nav>
-                <img src="assets/images/cat.jpg" alt="cat">
-                <h1 class="name">Anthony Nguyen</h1> </br>
-                <p> Computer Science and Engineer in Davis </p>
-                <ul>
-                    <li><a href="#Home">Home</a></li>
-                    <li><a href="#About-Me">About Me</a></li>
-                    <li><a href="#Projects">Projects</a></li>
-                    <li><a href="#Skills">Skills</a></li>
-                    <li><a href="#Education">Education</a></li>
-                    <li><a href="#Work">Work</a></li>
-                    <li><a href="#Contact">Contact</a></li>
-                </ul>
-                <p class="copyright" >&copy; 2023 bloopbloop.com | This is in the makings and is definitely not compeleted yet. 
+
+    <!-- Navigation Sidebar -->
+    <div class="sidebar text-white d-flex flex-column align-items-center p-3">
+        <!-- Typing Function Page -->
+        <section id="sidebar" class="d-flex flex-column justify-content-center align-items-center text-center">
+            <div class="hero-container">
+                <h1>Anthony Nguyen</h1>
+                <p>I'm a
+                    <span class="typed" data-typed-items="Computer Scientist, Designer, Developer, Student, Youth Leader, Photographer"></span>
                 </p>
-            </nav>
-        </div>
-    </div>
-<!--======================= Home ===================================-->
-<div class="background" id="Home"></div>
-<section class = "container" id="about">
-    <h2 class = "section_title"> I am a Computer Engineer</h2>
-</section>
-    
-<!--======================= About Me ===================================-->
-    <section class = "container" id="About-Me">
-            <h2 class = "section_title"> About Me</h2>
-            <span class = "section_subtitle"><div style="text-decoration: underline 2px;"> My Introduction </span></div>
-<br>
-            <p> I am a 4th year studnt at UC Davis majoring in Computer Science and Engineering. 
-                Outside of school, I am a Level 2 Youth Leader for the Vietnamese Eucharistic Youth Movement (VEYM). 
-            </p>
-<br>
+            </div>
+        </section>
 
-            <span class = "section_subtitle"><div style="text-decoration: underline 2px;"> Background </span></div>
-            <br>
-            <p> Something something something 
-            </p>
-    </section>
-<!--======================= Project ===================================-->
-<section class = "container" id="Projects">
-    <h2 class = "section_title"> Projects </h2>
+        <nav class="w-100">
+            <ul class="nav flex-column text-center">
+                <li class="nav-item"><a href="#About" class="nav-link text-white">About</a></li>
+                <li class="nav-item"><a href="#Experience" class="nav-link text-white">Experience</a></li>
+            </ul>
+        </nav>
+    </div>
 
-    <div class = "container">
-    </div>
-    <p> I created this website using HTML, CSS, and JavaScript with a few others. I developed this website utilizing different technologies such as APIs and Library. 
-        Check it out! https://jacob-kachmarek.github.io/dtc-solutions/
-    </p>
-</section>
-<!--======================= Skills ===================================-->
-<section class = "container" id="Skills">
-    <h2 class = "section_title"> Skills</h2>
-    <br></br>
-    <span class = "section_subtitle"><div style="text-decoration: underline 2px;">Coding Skills </span></div>
+    <!-- Allows the typed feature to work -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const typedElement = document.querySelector('.typed');
+            if (typedElement) {
+                const items = typedElement.getAttribute('data-typed-items').split(',').map(item => item.trim());
+                new Typed('.typed', {
+                    strings: items,
+                    typeSpeed: 80,       // Typing speed 
+                    backSpeed: 50,       // Backspacing speed
+                    backDelay: 1500,     // Pause before deleting 
+                    loop: true           // Keep looping the text
+                });
+            }
+        });
+    </script>
 
-    <ul>
-        <li><a> C++</a></li> 
-        <li><a> Java</a></li>
-        <li><a> HTML</a></li>
-        <li><a> CSS</a></li>
-        <li><a>Scala</a></li>
-    </ul>
-<br></br>
-<span class = "section_subtitle"><div style="text-decoration: underline 2px;"> Qualities </span></div>
-    <ul>
-        <li><a> Adaptable</a></li>
-        <li><a> Faster Learner</a></li>
-        <li><a> Leader</a></li>
-        <li><a> Great Communications </a></li>
-        <li><a> Understanding</a></li>
-    </ul>
-</section>
-<!--======================= Education ===================================-->
-<section class = "container" id="Education">
-    <h2 class = "section_title"> Education</h2>
-    <span class = "section_subtitle"><div style="text-decoration: underline 2px;"> Folsom Lake College </span></div>
+    <!-- Main Content -->
+    <div class="main-content">
 
-    <div class = "container">
-        <div style="text-align: left;"><img src="assets/images/Folsom-lake-college.png" alt="Folsom-lake-college"></div>
+        <!-- About Me Section -->
+        <section class="container py-5" id="About-Me">
+            <h2 class="section_title">About Me</h2>
+            <p class="section_subtitle" style="text-decoration: underline 2px;">My Introduction</p>
+            <p>I am a 4th year student at UC Davis majoring in Computer Science and Engineering. Outside of school, I am a Level 2 Youth Leader for the Vietnamese Eucharistic Youth Movement (VEYM).</p>
+            
+            <p class="section_subtitle" style="text-decoration: underline 2px;">Background</p>
+            <p>Something something something</p>
+        </section>
+
+        <!-- Experience Section -->
+        <section class="container py-5" id="Experience">
+            <h2 class="section_title">Experience</h2>
+            <p class="section_subtitle" style="text-decoration: underline 2px;">Intel</p>
+            <p>Nothing yet — but working on it!</p>
+        </section>
+
     </div>
-    <p> 2019-2021</p>
-<br></br>
-    <span class = "section_subtitle"><div style="text-decoration: underline 2px;"> University of California, Davis </span></div>
-    <div class = "container">
-        <img src="assets/images/Davis.png" alt="Davis">
-    </div>
-    <p> 2021-2023 </p>
-<br></br>
-    <span class = "section_subtitle"><div style="text-decoration: underline 2px;"> University of California, Berkeley </span></div>
-    <div class = "container">
-        <img src="assets/images/Berkeley.png" alt="Berkeley">
-    </div>
-    <p> 2023-2023 </p>
-</section>
-<!--======================= Work Experience ===================================-->
-<section class = "container" id="Work">
-    <h2 class = "section_title"> Work Experience </h2>
-    <span class = "section_subtitle"> Intel </span>
-    <p> Nothing 
-    </p>
-</section>
-<!--======================= Contact ===================================-->
-<section class = "container" id="Contact">
-    <h2 class = "section_title"> Contact </h2>
-    <span class = "section_subtitle">
-        <ul>
-            <li><a> Phone Number: </a></li> 
-            <li><a> Email: </a></li>
-            <li><a> github: </a></li>
-            <li><a> linkedin:</a></li>
-        </ul>
-     </span>
-</section>
-    
+
+    <!-- Scripts -->
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 </body>
 </html>
+                <!-- <li class="nav-item"><a href="#Home" class="nav-link text-white">Home</a></li>
+                <li class="nav-item"><a href="#About-Me" class="nav-link text-white">About Me</a></li>
+                <li class="nav-item"><a href="#Projects" class="nav-link text-white">Projects</a></li>
+                <li class="nav-item"><a href="#Skills" class="nav-link text-white">Skills</a></li>
+                <li class="nav-item"><a href="#Education" class="nav-link text-white">Education</a></li>
+                <li class="nav-item"><a href="#Work" class="nav-link text-white">Work</a></li> -->
+                <!-- <li class="nav-item"><a href="#Contact" class="nav-link text-white">Contact</a></li> -->
+       <!-- Projects Section -->
+        <!-- <section class="container py-5" id="Projects">
+            <h2 class="section_title">Projects</h2>
+            <p>I created this website using HTML, CSS, and JavaScript with a few others. We used various technologies such as APIs and libraries. Check it out: 
+                <a href="https://jacob-kachmarek.github.io/dtc-solutions/" target="_blank">DTC Solutions</a>
+            </p>
+        </section> -->
+
+        <!-- Skills Section -->
+        <!-- <section class="container py-5" id="Skills">
+            <h2 class="section_title">Skills</h2>
+            <p class="section_subtitle" style="text-decoration: underline 2px;">Coding Skills</p>
+            <ul>
+                <li>C++</li>
+                <li>Java</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Scala</li>
+            </ul>
+
+            <p class="section_subtitle" style="text-decoration: underline 2px;">Qualities</p>
+            <ul>
+                <li>Adaptable</li>
+                <li>Fast Learner</li>
+                <li>Leader</li>
+                <li>Great Communicator</li>
+                <li>Understanding</li>
+            </ul>
+        </section> -->
+
+        <!-- Education Section -->
+        <!-- <section class="container py-5" id="Education">
+            <h2 class="section_title">Education</h2>
+
+            <p class="section_subtitle" style="text-decoration: underline 2px;">Folsom Lake College</p>
+            <img src="assets/images/Folsom-lake-college.png" alt="Folsom Lake College" class="img-fluid">
+            <p>2019–2021</p>
+
+            <p class="section_subtitle" style="text-decoration: underline 2px;">University of California, Davis</p>
+            <img src="assets/images/Davis.png" alt="UC Davis" class="img-fluid">
+            <p>2021–2023</p>
+
+            <p class="section_subtitle" style="text-decoration: underline 2px;">University of California, Berkeley</p>
+            <img src="assets/images/Berkeley.png" alt="UC Berkeley" class="img-fluid">
+            <p>2023</p>
+        </section> -->
+
+        <!-- Work Section -->
+        <!-- <section class="container py-5" id="Work">
+            <h2 class="section_title">Work Experience</h2>
+            <p class="section_subtitle">Intel</p>
+            <p>Nothing yet — but working on it!</p>
+        </section> -->
+
+        <!-- Contact Section -->
+        <!-- <section class="container py-5" id="Contact">
+            <h2 class="section_title">Contact</h2>
+            <ul>
+                <li>Phone Number: [Your Number]</li>
+                <li>Email: [Your Email]</li>
+                <li>GitHub: <a href="#">github.com/yourusername</a></li>
+                <li>LinkedIn: <a href="#">linkedin.com/in/yourprofile</a></li>
+            </ul>
+        </section> -->
